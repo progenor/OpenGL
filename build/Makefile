@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/progenor/Documents/School/OpenGL/Lab2
+CMAKE_SOURCE_DIR = /home/progenor/Documents/School/OpenGL/Lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/progenor/Documents/School/OpenGL/Lab2/build
+CMAKE_BINARY_DIR = /home/progenor/Documents/School/OpenGL/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/progenor/Documents/School/OpenGL/Lab2/build/CMakeFiles /home/progenor/Documents/School/OpenGL/Lab2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/progenor/Documents/School/OpenGL/build/CMakeFiles /home/progenor/Documents/School/OpenGL/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/progenor/Documents/School/OpenGL/Lab2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/progenor/Documents/School/OpenGL/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Lab2
+# Target rules for targets named Pontok
 
 # Build rule for target.
-Lab2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Lab2
-.PHONY : Lab2
+Pontok: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pontok
+.PHONY : Pontok
 
 # fast build rule for target.
-Lab2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2.dir/build.make CMakeFiles/Lab2.dir/build
-.PHONY : Lab2/fast
+Pontok/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pontok.dir/build.make CMakeFiles/Pontok.dir/build
+.PHONY : Pontok/fast
 
-Lab2.o: Lab2.cc.o
-.PHONY : Lab2.o
+Pontok.o: Pontok.cc.o
+.PHONY : Pontok.o
 
 # target to build an object file
-Lab2.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2.dir/build.make CMakeFiles/Lab2.dir/Lab2.cc.o
-.PHONY : Lab2.cc.o
+Pontok.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pontok.dir/build.make CMakeFiles/Pontok.dir/Pontok.cc.o
+.PHONY : Pontok.cc.o
 
-Lab2.i: Lab2.cc.i
-.PHONY : Lab2.i
+Pontok.i: Pontok.cc.i
+.PHONY : Pontok.i
 
 # target to preprocess a source file
-Lab2.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2.dir/build.make CMakeFiles/Lab2.dir/Lab2.cc.i
-.PHONY : Lab2.cc.i
+Pontok.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pontok.dir/build.make CMakeFiles/Pontok.dir/Pontok.cc.i
+.PHONY : Pontok.cc.i
 
-Lab2.s: Lab2.cc.s
-.PHONY : Lab2.s
+Pontok.s: Pontok.cc.s
+.PHONY : Pontok.s
 
 # target to generate assembly for a file
-Lab2.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2.dir/build.make CMakeFiles/Lab2.dir/Lab2.cc.s
-.PHONY : Lab2.cc.s
+Pontok.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pontok.dir/build.make CMakeFiles/Pontok.dir/Pontok.cc.s
+.PHONY : Pontok.cc.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Lab2"
-	@echo "... Lab2.o"
-	@echo "... Lab2.i"
-	@echo "... Lab2.s"
+	@echo "... Pontok"
+	@echo "... Pontok.o"
+	@echo "... Pontok.i"
+	@echo "... Pontok.s"
 .PHONY : help
 
 

@@ -1,8 +1,8 @@
-Pontok: \
+Lab2: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
-  CMakeFiles/Pontok.dir/Pontok.cc.o \
+  CMakeFiles/Lab2.dir/Lab2.cc.o \
   /usr/lib/x86_64-linux-gnu/libGL.so \
   /usr/lib/x86_64-linux-gnu/libglut.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
@@ -36,7 +36,6 @@ Pontok: \
   /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib/x86_64-linux-gnu/libXxf86vm.so.1 \
   /lib/x86_64-linux-gnu/libXi.so.6 \
-  /lib/x86_64-linux-gnu/libm.so.6 \
   /lib64/ld-linux-x86-64.so.2 \
   /lib/x86_64-linux-gnu/libxcb.so.1 \
   /lib/x86_64-linux-gnu/libXext.so.6 \
@@ -49,7 +48,7 @@ Pontok: \
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
-CMakeFiles/Pontok.dir/Pontok.cc.o:
+CMakeFiles/Lab2.dir/Lab2.cc.o:
 
 /usr/lib/x86_64-linux-gnu/libGL.so:
 
@@ -116,8 +115,6 @@ CMakeFiles/Pontok.dir/Pontok.cc.o:
 /lib/x86_64-linux-gnu/libXxf86vm.so.1:
 
 /lib/x86_64-linux-gnu/libXi.so.6:
-
-/lib/x86_64-linux-gnu/libm.so.6:
 
 /lib64/ld-linux-x86-64.so.2:
 

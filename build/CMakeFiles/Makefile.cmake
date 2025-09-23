@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/progenor/Documents/School/OpenGL/Lab2/CMakeLists.txt"
+  "/home/progenor/Documents/School/OpenGL/Lab1/CMakeLists.txt"
   "CMakeFiles/3.31.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeSystem.cmake"
@@ -47,8 +47,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/usr/share/cmake-3.31/Modules/Compiler/Clang-C.cmake"
+  "/usr/share/cmake-3.31/Modules/Compiler/Clang-CXX.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+  "/usr/share/cmake-3.31/Modules/Compiler/Clang-FindBinUtils.cmake"
+  "/usr/share/cmake-3.31/Modules/Compiler/Clang.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake"
@@ -58,10 +62,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
-  "/usr/share/cmake-3.31/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
-  "/usr/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake"
-  "/usr/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/GNU.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake"
@@ -115,6 +116,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake"
+  "/usr/share/cmake-3.31/Modules/Platform/Linux-Clang-C.cmake"
+  "/usr/share/cmake-3.31/Modules/Platform/Linux-Clang-CXX.cmake"
   "/usr/share/cmake-3.31/Modules/Platform/Linux-Determine-CXX.cmake"
   "/usr/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -143,5 +146,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Lab2.dir/DependInfo.cmake"
+  "CMakeFiles/Pontok.dir/DependInfo.cmake"
   )

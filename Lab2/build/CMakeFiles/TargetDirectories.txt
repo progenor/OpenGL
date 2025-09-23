@@ -1,3 +1,3 @@
-/home/progenor/Documents/School/OpenGL/Lab1/build/CMakeFiles/Pontok.dir
-/home/progenor/Documents/School/OpenGL/Lab1/build/CMakeFiles/edit_cache.dir
-/home/progenor/Documents/School/OpenGL/Lab1/build/CMakeFiles/rebuild_cache.dir
+/home/progenor/Documents/School/OpenGL/Lab2/build/CMakeFiles/Lab2.dir
+/home/progenor/Documents/School/OpenGL/Lab2/build/CMakeFiles/edit_cache.dir
+/home/progenor/Documents/School/OpenGL/Lab2/build/CMakeFiles/rebuild_cache.dir

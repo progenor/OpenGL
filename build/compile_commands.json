@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/progenor/Documents/School/OpenGL/build",
+  "command": "/usr/bin/clang++   -g -o CMakeFiles/Pontok.dir/Pontok.cc.o -c /home/progenor/Documents/School/OpenGL/Lab1/Pontok.cc",
+  "file": "/home/progenor/Documents/School/OpenGL/Lab1/Pontok.cc",
+  "output": "CMakeFiles/Pontok.dir/Pontok.cc.o"
+}
+]
