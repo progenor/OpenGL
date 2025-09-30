@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/progenor/Documents/School/OpenGL/Lab2/Lab2.cc" "CMakeFiles/Lab2.dir/Lab2.cc.o" "gcc" "CMakeFiles/Lab2.dir/Lab2.cc.o.d"
+  "/home/progenor/Documents/code/Sch/OpenGL/Lab2/Lab2.cc" "CMakeFiles/Lab2.dir/Lab2.cc.o" "gcc" "CMakeFiles/Lab2.dir/Lab2.cc.o.d"
   "" "Lab2" "gcc" "CMakeFiles/Lab2.dir/link.d"
   )
 

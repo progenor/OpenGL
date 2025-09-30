@@ -1,136 +1,88 @@
-/*
-   Rajzoljunk:
-	  -egy piros pontot a (10, 15),
-	  -egy zöld pontot az (50, 10) és
-	  -egy kék pontot a (-30, -10) koordinátákra!
-
-   A színtér forogjon!
-
-   (Az ablak legyen 700*600-as méretû.)
-*/
-
 #include <GL/glut.h>
 #include <cmath>
 
-static GLfloat spin = 0.0;
+static GLfloat D2R = 3.141529f / 180.0f;
+float sceneExtent = 20.0f;
 
-void init(void)
+void drawSquare()
 {
-	glClearColor(0.0, 0.0, 0.0, 0.0); // a törlõszín a fekete
-	glShadeModel(GL_FLAT);
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, -0.5f);
+	glVertex2f(0.5f, 0.5f);
+	glVertex2f(-0.5f, 0.5f);
+	glEnd();
 }
 
-static int sizes[] = {1, 1, 2, 3, 5, 8, 13};
-static GLfloat D2R = 3.14159 / 180.0;
-
-// ...existing code...
-void drawSmallBOx(float scale = 1.0f)
+void drawArc()
 {
 	glBegin(GL_LINE_STRIP);
-	glColor3f(1.0, 1.0, 1.0);
-	for (int i = 0; i <= 90; i++)
+	for (int i = 90; i <= 180; ++i)
 	{
-		glVertex2f((-0.5 + cos(i * D2R)) * scale, (-.05 + sin(i * D2R)) * scale);
+		glVertex2f(0.5 + cos(i * D2R), -0.5 + sin(i * D2R));
 	}
-	glEnd();
-
-	glColor3f(1.0, 0.0, 0.0); // red color for the box
-	glBegin(GL_LINE_LOOP);
-	glVertex2f(-0.6 * scale, -0.15 * scale); // Bottom left
-	glVertex2f(0.6 * scale, -0.15 * scale);	 // Bottom right
-	glVertex2f(0.6 * scale, 1.05 * scale);	 // Top right
-	glVertex2f(-0.6 * scale, 1.05 * scale);	 // Top left
 	glEnd();
 }
 
-void display(void)
+void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
-	glPushMatrix();
-	glEnable(GL_POINT_SMOOTH);
 
-	// first box (normal size)
-	drawSmallBOx(1.0f);
+	float size = 8.0f;
+	float phi = 1.618f;
+	for (int i = 0; i < 8; ++i)
+	{
+		glPushMatrix();
 
-	// second box (scaled up, e.g. golden ratio)
-	glPushMatrix();
-	glTranslatef(-0.9, 0.5, 0.0);
-	glRotatef(90, 0.0, 0.0, 1.0);
-	drawSmallBOx(1.0f);
-	glPopMatrix();
+		glScalef(size, size, 0);
 
-	// third box (scaled down, for example)
-	glPushMatrix();
-	glTranslatef(0.9, 0.5, 0.0);
-	glRotatef(180, 0.0, 0.0, 1.0);
-	drawSmallBOx(1.68f);
-	glPopMatrix();
+		glColor3f(0, 1, 0);
+		drawSquare();
 
-	glPopMatrix();
+		glColor3f(1, 0, 0);
+		drawArc();
+		glPopMatrix();
+		float nextSize = size / phi;
+		glTranslatef((size + nextSize) / 2, (size - nextSize) / 2, 0);
+		glRotatef(-90, 0, 0, 1);
+		size = nextSize;
+	}
+
 	glutSwapBuffers();
-	glFlush();
-}
-// ...existing code...
-void keyboard(unsigned char key, int x, int y) // billentûkezelés
-{
-	switch (key)
-	{
-	case 27:	 // ha escape-et nyomtam
-		exit(0); // lépjen ki a programból
-		break;
-	}
-}
-
-void spinDisplay(void)
-{
-	spin = spin + 0.5;
-	if (spin > 360)
-		spin = spin - 360;
-	glutPostRedisplay(); // újrarajzolás
-}
-
-void mouse(int button, int state, int x, int y)
-{
-	switch (button)
-	{
-	case GLUT_LEFT_BUTTON:
-		if (state == GLUT_DOWN)
-			glutIdleFunc(spinDisplay);
-		if (state == GLUT_UP)
-			glutIdleFunc(nullptr);
-		break;
-	default:
-		break;
-	}
 }
 
 void reshape(int w, int h)
 {
-	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+	glViewport(0, 0, w, h);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	if (w <= h)
-		glOrtho(-20, 20, -20 * (GLfloat)h / (GLfloat)w,
-				20 * (GLfloat)h / (GLfloat)w, -1.0, 1.0);
+
+	float aspect = float(w) / float(h);
+	float halfExtent = sceneExtent / 2.0f;
+
+	if (aspect >= 1.0f)
+	{
+		gluOrtho2D(-halfExtent * aspect, halfExtent * aspect,
+				   -halfExtent, halfExtent);
+	}
 	else
-		glOrtho(-20 * (GLfloat)w / (GLfloat)h,
-				20 * (GLfloat)w / (GLfloat)h, -20, 20, -1.0, 1.0);
+	{
+		gluOrtho2D(-halfExtent, halfExtent,
+				   -halfExtent / aspect, halfExtent / aspect);
+	}
+
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	glutInit(&argc, argv);						 // inicializalja a glut lib-et
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB); // az ablak kétszeresen pufferelt,és RGB módú
-	glutInitWindowSize(700, 600);				 // az ablak 700x600-as
-	glutInitWindowPosition(100, 100);			 // az ablak bal felsõ sarkának koordinátája
-	glutCreateWindow("Pontok");					 // neve Pontok
-	init();										 // inicializálás
-	glutDisplayFunc(display);					 // a képernyõ események kezelése
-	glutKeyboardFunc(keyboard);					 // billentyûzet események kezelése
-	glutReshapeFunc(reshape);					 // újrarajzolás nagyításkor, kicsinyítéskor
-	glutMouseFunc(mouse);						 // egérkezelés
-	glutMainLoop();								 // belépés az esemény hurokba...
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutInitWindowSize(600, 600);
+	glutCreateWindow("Fibonacci");
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	glutMainLoop();
 	return 0;
 }
