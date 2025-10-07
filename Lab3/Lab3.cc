@@ -127,7 +127,7 @@ void drawDigitalDisplay(float y_position)
 	}
 
 	// Draw time
-	glRasterPos2f(-3.0f, y_position - 2.0f);
+	glRasterPos2f(2.0f, y_position);
 	for (char c : timeStr.str())
 	{
 		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
