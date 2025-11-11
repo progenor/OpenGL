@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
-project(Lab5)
+project(Project)
 
 # Find required packages
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
 # Add the executable
-add_executable(Lab5 Lab5.cc)
+add_executable(Project Project.cc)
 
 # Link against required libraries
 # Add GLU to the list of libraries
-target_link_libraries(Lab5 ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} GLU)
+target_link_libraries(Project ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} GLU)
